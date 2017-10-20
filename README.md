@@ -6,3 +6,5 @@ Run the app as:
    Eclipse > Run as > Maven Build > Goal = tomcat7:run
 
 This should start app at : http://localhost:8080/mvc-app
+
+The default (welcome) page is /login.do

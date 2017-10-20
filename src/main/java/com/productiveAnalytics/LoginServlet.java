@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 		out.println("<title>Yahoo!!!!!!!!</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("My First Servlet");
+		out.println("My simple Servlet (Java EE 8.0)");
 		out.println("</body>");
 		out.println("</html>");
 
