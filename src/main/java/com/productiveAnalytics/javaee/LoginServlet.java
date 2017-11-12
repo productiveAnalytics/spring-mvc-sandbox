@@ -1,7 +1,7 @@
-package com.productiveAnalytics;
+package com.productiveAnalytics.javaee;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,11 +33,14 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException
 	{
+		// LEVEL 1 : 
+		//   Url-mapped Servlet directly handles (i.e. WITHOUT Front Controller) requests.
+		//   And, the servlet itself renders UI i.e. hard-coded HTML
 		/*
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("<title>Yahoo!!!!!!!! from Servlet</title>");
 		out.println("</head>");
 		out.println("<body>");
 		out.println("My simple Servlet (Java EE 8.0)");
@@ -45,6 +48,9 @@ public class LoginServlet extends HttpServlet {
 		out.println("</html>");
 		*/
 		
+		// LEVEL 2 : 
+		//   Url-mapped Servlet directly handles (i.e. WITHOUT Front Controller) requests, 
+		//   however the actual request is forwarded to View i.e. JSP
 		request.getRequestDispatcher("/WEB-INF/views/welcome.jsp")
 			   .forward(request, response);
 	}
